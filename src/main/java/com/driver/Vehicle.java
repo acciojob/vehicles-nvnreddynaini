@@ -9,7 +9,6 @@ public class Vehicle {
     private int direction;
 
     public Vehicle() {
-        //this.name = name;
         this.speed = 0;
         this.direction = 0;
     }
