@@ -2,15 +2,27 @@ package com.driver;
 
 public class Vehicle {
 
-    public String name;
+    private String name;
     public int currentSpeed;
-    public int currentDirection;
+    private int currentDirection;
     private int speed;
     private int direction;
 
     public Vehicle() {
         this.speed = 0;
         this.direction = 0;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getCurrentSpeed() {
+        return currentSpeed;
+    }
+
+    public int getCurrentDirection() {
+        return currentDirection;
     }
 
     public void steer(int direction){
