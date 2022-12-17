@@ -1,50 +1,57 @@
 package com.driver;
 
 public class Car extends Vehicle {
-    private int wheels;
-    private String type;
-    private int doors;
-    private int gears;
-    private boolean isManual;
+    public int wheels;
+    public String type;
+    public int doors;
+    public int gears;
+    public boolean isManual;
     public int currentGear;
-    private int seats;
+    public int seats;
 
-    public Car() {
-        super();
+    public Car(String name, int wheels, int doors, int gears, boolean isManual, String type, int seats) {
         //Hint: Car extends Vehicle
-        currentGear = 1;
+        super(name);
+        this.name = name;
+        this.wheels = wheels;
+        this.doors = doors;
+        this.gears = gears;
+        this.isManual = isManual;
+        this.type = type;
+        this.seats = seats;
+        this.currentGear = 1;
     }
 
     public int getWheels() {
-        return wheels;
+        return this.wheels;
     }
 
     public String getType() {
-        return type;
+        return this.type;
     }
 
     public int getDoors() {
-        return doors;
+        return this.doors;
     }
 
     public int getGears() {
-        return gears;
+        return this.gears;
     }
 
     public boolean isManual() {
-        return isManual;
+        return this.isManual;
     }
 
     public int getCurrentGear() {
-        return currentGear;
+        return this.currentGear;
     }
 
     public int getSeats() {
-        return seats;
+        return this.seats;
     }
 
     public void changeGear(int newGear){
-        currentGear = newGear;
+        this.currentGear = newGear;
         System.out.println("changeGear method called - The gear is changed to: " + currentGear);
     }
 

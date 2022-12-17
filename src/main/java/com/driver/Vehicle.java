@@ -2,32 +2,33 @@ package com.driver;
 
 public class Vehicle {
 
-    private String name;
+    public String name;
     public int currentSpeed;
     private int currentDirection;
     private int speed;
     private int direction;
 
-    public Vehicle() {
+    public Vehicle(String name) {
+        this.name = name;
         this.speed = 0;
         this.direction = 0;
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public int getCurrentSpeed() {
-        return currentSpeed;
+        return this.currentSpeed;
     }
 
     public int getCurrentDirection() {
-        return currentDirection;
+        return this.currentDirection;
     }
 
     public void steer(int direction){
         //direction is in degrees, add it to the current direction
-        currentDirection = currentDirection + direction;
+        this.currentDirection = this.currentDirection + direction;
         System.out.println("steer method called - The direction is changed to: " + currentDirection + " degrees");
     }
 
